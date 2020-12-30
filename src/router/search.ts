@@ -22,7 +22,7 @@ export const searchBook = async (req: any, res: any) => {
             let results: any = []
             $('.result-item').each(function (index: any, item: any) {
                 results.push({
-                    cover: $(item).find('.result-game-item-pic-link img').attr('src'),
+                    cover: $([item]).find('.result-game-item-pic-link img').attr('src'),
                     name: $(item).find('.result-game-item-title-link span').text(),
                     url: $(item).find('.result-game-item-title-link').attr('href'),
                     author: $(item).find('.result-game-item-info-tag').eq(0).find('span').eq(1).text(),
